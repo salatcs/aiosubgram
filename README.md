@@ -166,7 +166,7 @@ order = await client.create_order(
     link="https://t.me/my_channel",
     ads_type="channel",
     quantity_all=1000,
-    price=0.5
+    price=1.3
 )
 print(f"Заказ создан: ID {order.response.order_id}")
 ```
