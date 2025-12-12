@@ -1,0 +1,24 @@
+.doc-signature {
+    background: transparent !important;
+    border: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 1em !important;
+}
+
+.doc-signature code {
+    background: transparent !important;
+    font-size: 0.95em !important;
+}
+
+.doc-signature .k {
+    color: #ff79c6 !important;
+}
+
+.md-typeset .doc-signature, 
+.md-typeset .doc-signature code {
+    box-shadow: none !important;
+}
+
+.doc-section-item {
+    margin-bottom: 10px;
+}
