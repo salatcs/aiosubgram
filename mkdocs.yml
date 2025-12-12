@@ -1,0 +1,55 @@
+site_name: aiosubgram Docs
+site_url: https://salatcs.github.io/aiosubgram/
+repo_url: https://github.com/salatcs/aiosubgram
+repo_name: salatcs/aiosubgram
+
+theme:
+  name: material
+  palette: 
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/brightness-4
+        name: Переключиться на светлую тему
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/brightness-7 
+        name: Переключиться на темную тему
+  features:
+    - content.code.copy
+    - navigation.expand
+
+extra_css:
+- stylesheets/extra.css
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            show_root_heading: true
+            show_source: true
+            heading_level: 3
+            separate_signature: true
+            show_signature_annotations: true
+            show_category_heading: true
+            show_symbol_type_heading: true
+            docstring_style: google
+            merge_init_into_class: true
+            show_if_no_docstring: true
+
+nav:
+  - Главная: index.md
+  - Клиент: client.md
+  - Методы:
+      - Рекламодатель: advertiser.md
+      - Владелец бота: publisher.md
+      - Общие: general.md
+  - Типы данных:
+      - Рекламодатель: advertiser_types.md
+      - Владелец бота: publisher_types.md
+      - Общие: general_types.md
+  - Utils (Aiogram): utils.md

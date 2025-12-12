@@ -10,7 +10,7 @@ def load_requirements(filename='requirements.txt'):
 
 setup(
     name='aiosubgram',
-    version='1.0.0',
+    version='1.0.1',
     author='salatcs',
     author_email='salatcs03@gmail.com',
     description='Asynchronous library for working with subgram.org',

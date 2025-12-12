@@ -1,0 +1,51 @@
+.doc-signature {
+    background: transparent !important;
+    border: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 1em !important;
+}
+
+.doc-signature code {
+    background: transparent !important;
+    font-size: 0.95em !important;
+}
+
+.doc-signature .k {
+    color: #ff79c6 !important;
+}
+
+.md-typeset .doc-signature, 
+.md-typeset .doc-signature code {
+    box-shadow: none !important;
+}
+
+.doc-section-item {
+    margin-bottom: 10px;
+}
+
+.doc-object .doc-children {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #e5e5e5;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+[data-md-color-scheme="slate"] .doc-object .doc-children {
+    border-left: 2px solid #404040;
+}
+
+.doc-attribute-name {
+    font-weight: bold;
+    color: #4051b5;
+}
+[data-md-color-scheme="slate"] .doc-attribute-name {
+    color: #82aaff;
+}
+
+.doc-heading {
+    margin-top: 1em;
+    font-size: 1.1em;
+    font-weight: 600;
+    opacity: 0.8;
+}

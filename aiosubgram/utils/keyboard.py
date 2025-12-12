@@ -1,4 +1,4 @@
-from typing import Optional, Union
+from typing import Optional, Any
 
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
@@ -14,22 +14,21 @@ async def create_op_keyboard(
     smart_link_text: str = "➕ Перейти",
     resource_text: str = "➕ Перейти",
     done_button_text: Optional[str] = "✅ Я подписался!",
-    **kwargs
+    **kwargs: Any
 ) -> InlineKeyboardMarkup:
     """
     Генерирует клавиатуру (InlineKeyboardMarkup) для aiogram на основе списка спонсоров.
-    
     Если `sponsors_response` не передан, функция сама сделает запрос к API через `client`.
 
     Args:
-        sponsors_response: Объект ответа от get_sponsors (если уже есть).
-        client: Экземпляр SubgramClient (нужен, если sponsors_response is None).
-        channel_text: Текст на кнопке для каналов (можно использовать {name}).
-        bot_text: Текст на кнопке для ботов.
-        smart_link_text: Текст на кнопке для смарт-ссылок.
-        resource_text: Текст на кнопке для внешних ресурсов.
-        done_button_text: Текст кнопки проверки подписки (callback_data: "subgram-done").
-        **kwargs: Аргументы для get_sponsors (chat_id, user_id и т.д.), если запрос делается внутри.
+        sponsors_response (GetSponsors): Объект ответа от get_sponsors (если уже есть).
+        client (SubgramClient): Экземпляр SubgramClient (нужен, если sponsors_response is None).
+        channel_text (str): Текст на кнопке для каналов (можно использовать {name}).
+        bot_text (str): Текст на кнопке для ботов.
+        smart_link_text (str): Текст на кнопке для смарт-ссылок.
+        resource_text (str): Текст на кнопке для внешних ресурсов.
+        done_button_text (Optional[str]): Текст кнопки проверки подписки (callback_data: "subgram-done").
+        **kwargs (Any): Аргументы для get_sponsors (chat_id, user_id и т.д.), если запрос делается внутри.
 
     Returns:
         InlineKeyboardMarkup: Готовая клавиатура со ссылками на спонсоров.
